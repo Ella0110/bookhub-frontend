@@ -14,11 +14,7 @@ jobs:
             - name: Login to docker hub
               run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
             - name: Build Docker Image
-              run: ｜
-                  docker build \
-                  --build-arg VITE_API_BASE_URL="${{ secrets.VITE_API_BASE_URL }}" \
-                  --build-arg VITE_STRIPE_PUB_KEY="${{ secrets.VITE_STRIPE_PUB_KEY }}" \
-                  -t ella0110/bookhub_frontend  .
+              run: docker build --build-arg VITE_API_BASE_URL="${{ secrets.VITE_API_BASE_URL }}" --build-arg VITE_STRIPE_PUB_KEY="${{ secrets.VITE_STRIPE_PUB_KEY }}" -t ella0110/bookhub_frontend  .
 
             - name: Publish Image to docker hub
               run: docker push ella0110/bookhub_frontend:latest
