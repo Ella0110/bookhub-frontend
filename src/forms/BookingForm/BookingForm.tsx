@@ -1,8 +1,5 @@
 import { useForm } from "react-hook-form";
-import type {
-    PaymentIntentResponse,
-    UserType,
-} from "../../../../backend/src/shared/type";
+import type { PaymentIntentResponse, UserType } from "../../shared/type";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { type StripeCardElement } from "@stripe/stripe-js";
 import { useSearchContext } from "../../contexts/SearchContext";

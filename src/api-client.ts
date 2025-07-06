@@ -10,7 +10,7 @@ import type {
     HotelType,
     PaymentIntentResponse,
     UserType,
-} from "../../backend/src/shared/type";
+} from "./shared/type";
 import type { BookingFormData } from "./forms/BookingForm/BookingForm";
 
 //前端导入 env 数据的方式

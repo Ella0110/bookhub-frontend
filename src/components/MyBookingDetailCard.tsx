@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import type { HotelType } from "../../../backend/src/shared/type";
+import type { HotelType } from "../shared/type";
 import { IoMdMore } from "react-icons/io";
 import { deleteMyBooking } from "../api-client";
 

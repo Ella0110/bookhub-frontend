@@ -1,4 +1,4 @@
-import type { HotelType } from "../../../backend/src/shared/type";
+import type { HotelType } from "../shared/type";
 
 type Props = {
     adultCount: number;
