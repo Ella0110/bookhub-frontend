@@ -1,54 +1,36 @@
-# React + TypeScript + Vite
+# BookHub-FrontEnd
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React TypeScript Vite front-end for the BookHub booking platform, delivering fast performance and seamless user experiences.
 
-Currently, two official plugins are available:
+## Features
+- **User Authentication**  
+  - Registration, sign-in, token validation, and logout flows  
+  - Managed via a global React context  
+- **Hotel Discovery**  
+  - Browse latest and popular destinations  
+  - Advanced search with filters (destination, dates, occupancy, amenities)  
+- **Hotel Details & Booking**  
+  - Detailed hotel pages with photo gallery and facility list  
+  - Stripe-powered payment flow for secure bookings  
+- **Host Dashboard**  
+  - Add, edit, and manage your own hotel listings with image uploads  
+  - View and update booking requests  
+- **User Dashboard**  
+  - View, manage, and cancel your bookings  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies
+- **React 18** & **TypeScript** for robust, type-safe UI development  
+- **Vite** for lightning-fast builds and hot module replacement  
+- **React Router v7** for declarative, nested routing  
+- **React Query** for data fetching, caching, and synchronization  
+- **React Hook Form** & **React Datepicker** for intuitive form handling  
+- **Stripe React** (`@stripe/react-stripe-js` & `@stripe/stripe-js`) for payment integration  
+- **Tailwind CSS** & **PostCSS** for utility-first styling  
+- **Docker** & **Nginx** for containerized production deployment  
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Prerequisites
+- Node.js ≥ 18
+- npm ≥ 9
+- Docker (for containerized builds)
